@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/progressBar"
+        style="@style/SpinKitView.Large.CubeGrid"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/colorPrimary"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/pg_sample"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:textColor="@color/colorText"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:id="@+id/view1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text1"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/line"/>
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/secondary_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view1">
+
+
+                <RelativeLayout
+                    android:id="@+id/product_group_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textbox_height"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <Spinner
+                        android:id="@+id/product_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/border"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:spinnerMode="dropdown"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/arrow_down" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:background="@color/background"
+                    android:gravity="center_vertical"
+                    android:padding="2dp"
+                    android:text="@string/product_group"
+                    android:textColor="#53565f"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layout_one"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/product_group_layout">
+
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".8"
+                        android:orientation="vertical">
+
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textbox_height"
+                            android:id="@+id/literature_layout"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <Spinner
+                                android:id="@+id/literature"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:layout_marginStart="5dp"
+                                android:background="@drawable/border"
+                                android:gravity="center_vertical"
+                                android:padding="10dp"
+                                android:spinnerMode="dropdown"
+                                android:textSize="15sp"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="20dp"
+                                android:src="@drawable/arrow_down" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/literature"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="30dp"
+                            android:background="@color/background"
+                            android:textColor="#53565f"
+                            android:textSize="13sp"
+                            android:padding="2dp"/>
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".3"
+                        android:id="@+id/literature_box"
+                        android:background="@drawable/border"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="@color/colorText"
+                        android:layout_margin="10dp"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:text="00"
+                        android:textAlignment="center"
+                        android:gravity="center_vertical" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layout_two"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_one">
+
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".8"
+                        android:orientation="vertical">
+
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textbox_height"
+                            android:id="@+id/Physician_sample_layout"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+
+                            <Spinner
+                                android:id="@+id/Physician_sample"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:layout_marginStart="5dp"
+                                android:background="@drawable/border"
+                                android:gravity="center_vertical"
+                                android:padding="10dp"
+                                android:spinnerMode="dropdown"
+                                android:textSize="15sp"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="20dp"
+                                android:src="@drawable/arrow_down" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/physician_sample"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="30dp"
+                            android:background="@color/background"
+                            android:textColor="#53565f"
+                            android:textSize="13sp"
+                            android:padding="2dp"/>
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".3"
+                        android:id="@+id/Physician_sample_box"
+                        android:background="@drawable/border"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="@color/colorText"
+                        android:layout_margin="10dp"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:text="00"
+                        android:textAlignment="center"
+                        android:gravity="center_vertical" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layout_three"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_two">
+
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".8"
+                        android:orientation="vertical">
+
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textbox_height"
+                            android:id="@+id/gift_layout"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <Spinner
+                                android:id="@+id/gift"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:layout_marginStart="5dp"
+                                android:background="@drawable/border"
+                                android:gravity="center_vertical"
+                                android:padding="10dp"
+                                android:spinnerMode="dropdown"
+                                android:textSize="15sp"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="20dp"
+                                android:src="@drawable/arrow_down" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/gift"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="30dp"
+                            android:background="@color/background"
+                            android:textColor="#53565f"
+                            android:textSize="13sp"
+                            android:padding="2dp"/>
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".3"
+                        android:id="@+id/gift_box"
+                        android:background="@drawable/border"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="@color/colorText"
+                        android:layout_margin="10dp"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:text="00"
+                        android:textAlignment="center"
+                        android:gravity="center_vertical" />
+
+                </LinearLayout>
+
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:id="@+id/view2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/secondary_layout"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/line"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_four"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2">
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".8">
+
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textbox_height"
+                        android:id="@+id/accompanied_with"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColorHint="#2d9fb0"
+                        android:layout_margin="10dp"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:hint="@string/input"
+                        android:inputType="text"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/border"
+                        android:textCursorDrawable="@drawable/cursor_color"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/accompanied_with"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="30dp"
+                        android:background="@color/background"
+                        android:textColor="#53565f"
+                        android:textSize="13sp"
+                        android:padding="2dp"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_five"
+                android:orientation="horizontal"
+                android:baselineAligned="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_four">
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".8">
+
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/remarksbox_height"
+                        android:id="@+id/remarks"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColorHint="#2d9fb0"
+                        android:layout_margin="10dp"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:hint="@string/input"
+                        android:gravity="center_vertical"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:maxLength="2000"
+                        android:maxLines="5"
+                        android:background="@drawable/border"
+                        android:textCursorDrawable="@drawable/cursor_color"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/remarks"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="30dp"
+                        android:background="@color/background"
+                        android:textColor="#53565f"
+                        android:textSize="13sp"
+                        android:padding="2dp"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+
+            </LinearLayout>
+
+
+
+            <Button
+                android:layout_width="@dimen/remarksbox_height"
+                android:layout_height="wrap_content"
+                android:id="@+id/submitBtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_five"
+                android:layout_margin="10dp"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/white"
+                android:text="@string/submit"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:background="@drawable/button_border"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>

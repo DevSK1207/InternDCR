@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbar_height">?attr/actionBarSize</dimen>
+    <dimen name="view_height">2dp</dimen>
+    <dimen name="textbox_height">60dp</dimen>
+    <dimen name="remarksbox_height">120dp</dimen>
+
+</resources>

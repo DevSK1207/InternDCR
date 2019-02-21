@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Intern DCR</string>
+    <string name="intern_dcr">Intern DCR</string>
+    <string name="pg_sample">PG/Sample</string>
+    <string name="product_group">Product Group</string>
+    <string name="choose">Choose</string>
+    <string name="literature">Literature</string>
+    <string name="physician_sample">Physician Sample</string>
+    <string name="gift">Gift</string>
+    <string name="accompanied_with">Accompanied with</string>
+    <string name="remarks">Remarks</string>
+    <string name="input">Input</string>
+    <string name="submit">SUBMIT</string>
+</resources>
